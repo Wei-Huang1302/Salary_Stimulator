@@ -20,9 +20,19 @@ namespace PenyForPay
     /// </summary>
     public partial class MainWindow : Window
     {
+        SalaryVM svm = new SalaryVM();
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = svm;
+        }
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            svm.ResetAll();
+        }
+        private void HistoryEstimate_Click(object sender, RoutedEventArgs e)
+        {
+            svm.OpenEstimateFile();
         }
     }
 }

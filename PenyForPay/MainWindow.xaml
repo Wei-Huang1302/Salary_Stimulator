@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PenyForPay"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Salrystimulator" Height="450" Width="800">
+    <Grid Background="Lavender">
+
+        <!--Divide grid to 6*2-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Salary Calculator" HorizontalContentAlignment="Center"
+               FontSize="30" FontWeight="Bold" />
+        <Label Grid.Row="1" Grid.ColumnSpan="2" Content="Length of Employment (days)" HorizontalContentAlignment="Center"
+               FontSize="25" FontWeight="Bold" />
+        <Viewbox Grid.Row="3" Grid.Column="0">
+            <Label Grid.Row="3" Grid.Column="0" Content="Total Salary During Employment ($)" 
+               FontWeight="Bold"/>
+        </Viewbox>
+        <Viewbox Grid.Row="3" Grid.Column="1">
+            <Label Grid.Row="3" Grid.Column="1" Content="Last Day Salary ($)"
+               FontWeight="Bold" />
+        </Viewbox>
+        <!--Assign& bind labels& contents to vm-->
+        <Viewbox Grid.Row="4" Grid.Column="0" >
+            <Label Content="{Binding TotalSalary}" FontWeight="Bold" />
+        </Viewbox>
+        <Viewbox Grid.Row="4" Grid.Column="1" >
+            <Label Content="{Binding LastDaySalary }" FontWeight="Bold" />
+        </Viewbox>
+        <TextBox Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding EmploymentLengthInput, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=500}"
+                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" BorderBrush="Black" BorderThickness="8"
+                 Margin="5"/>
+        <Button Grid.Row="5" Grid.Column="0" Name="Reset" Content="Reset" FontSize="25"
+                FontWeight="Bold" Margin="5" Click="Reset_Click" />
+        <Button Grid.Row="5" Grid.Column="1" Name="HistoryEstimate" Content="Check Historical Estimate"
+                FontSize="25" FontWeight="Bold" Margin="5" Click="HistoryEstimate_Click"/>
     </Grid>
 </Window>
