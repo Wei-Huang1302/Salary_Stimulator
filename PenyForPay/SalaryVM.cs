@@ -21,10 +21,11 @@ namespace PenyForPay
             get { return employmentLengthInput; }
             set
             {
-                //Credict melwil Stackoverflow, 2 positive integers allowed only
+                //Credit melwil Stackoverflow, 2 positive integers allowed only
                 Regex regex = new Regex(@"^[0-9]{0,2}$");
                 if (regex.IsMatch(value))
                 {
+                    //calling method here is to automatically update the interface with updated information and also to continuously write data into file.
                     employmentLengthInput = value; SalaryCalculation(); SaveEstimate(); NotifyChanged();
                 }
             }
@@ -52,8 +53,11 @@ namespace PenyForPay
         {
             decimal BaseSalary = 1m;
             decimal SumOfSalary = 1m;
+
             for (int i = 1; i < int.Parse(EmploymentLengthInput); i++)
             {
+                //alternative way to solve the problem is using  2**n and round it.
+                //BaseSalary=Math.Round(Math.Pow(2., (double)i)),2);
                 BaseSalary *= SALARY_PROMOTION_FACTOR;
                 SumOfSalary += BaseSalary;
             }
@@ -83,7 +87,7 @@ namespace PenyForPay
         {
             Process.Start(FilePath);
         }
-        //as usual, reset all
+        //Reset UI to empty for new entry
         public void ResetAll()
         {
             EmploymentLengthInput = "0";

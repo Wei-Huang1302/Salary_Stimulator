@@ -40,6 +40,7 @@
         <Viewbox Grid.Row="4" Grid.Column="1" >
             <Label Content="{Binding LastDaySalary }" FontWeight="Bold" />
         </Viewbox>
+        <!--Bind user input, and allows delay for user to relase keyboard pressing-->
         <TextBox Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding EmploymentLengthInput, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Delay=500}"
                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" BorderBrush="Black" BorderThickness="8"
                  Margin="5"/>
