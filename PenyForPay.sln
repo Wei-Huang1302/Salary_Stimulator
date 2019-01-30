@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PenyForPay", "PenyForPay\PenyForPay.csproj", "{866D7818-0566-4AFF-BB75-47679ACD61CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{866D7818-0566-4AFF-BB75-47679ACD61CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866D7818-0566-4AFF-BB75-47679ACD61CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866D7818-0566-4AFF-BB75-47679ACD61CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866D7818-0566-4AFF-BB75-47679ACD61CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9846660-CEB0-46D1-8DF9-619F0560A1EA}
+	EndGlobalSection
+EndGlobal
